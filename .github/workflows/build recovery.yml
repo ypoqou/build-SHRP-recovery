@@ -49,12 +49,17 @@ jobs:
     permissions:
        contents: write
     steps:
-    - name: Setup ccache
+    - name: 更新软件库
       run: |
-        sudo su
-        apt install ccache
-        export USE_CCACHE=1
-        ccache -M 50G
-        exit
+        sudo apt update
+        
+        
+    - name: 设置环境
+      run: |
+        sudo apt install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev libwxgtk3.0-dev
+        sudo apt install -y openjdk-8-jdk
+        sudo apt install -y openjdk-11-jdk
+        sudo apt-get install python
+        sudo apt-get install python3-pip
             
 
