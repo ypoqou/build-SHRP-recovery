@@ -41,4 +41,20 @@ on:
         description: 'BUILD_TARGET'
         required: true
         default: 'recovery'
+          
+jobs:
+  build:
+    if: github.event.repository.owner.id == github.event.sender.id
+    runs-on: ubuntu-20.04
+     permissions:
+       contents: write
+     step:
+   -name: Setup ccache
+    run: |
+      sudo su
+      apt install ccache
+      export USE_CCACHE=1
+      ccache -M 50G
+      exit
+            
 
