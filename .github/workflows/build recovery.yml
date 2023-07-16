@@ -20,9 +20,9 @@ on:
         required: true
         default: '...请填写'
       DEVICE_PATH:
-        description: 'DEVICE_PATH'
+        description: '设备路径'
         required: true
-        default: 'device/asus/I003D'
+        default: '例：device/asus/I003D'
       COMMON_TREE_URL:
         description: 'COMMON_TREE_URL (if no common tree, leave blank)'
         required: false
@@ -30,13 +30,13 @@ on:
         description: 'COMMON_PATH (if no common tree, leave blank)'
         required: false
       DEVICE_NAME:
-        description: 'DEVICE_NAME'
+        description: '设备代号'
         required: true
-        default: 'I003D'
+        default: '例：I003D'
       MAKEFILE_NAME:
-        description: 'MAKEFILE_NAME'
+        description: '重命名新的文件名'
         required: true
-        default: 'twrp_I003D'
+        default: '例：twrp_I003D'
       BUILD_TARGET:
         description: 'BUILD_TARGET'
         required: true
