@@ -1,0 +1,44 @@
+name: build_recovery
+
+on:
+  workflow_dispatch:
+    inputs:
+      MANIFEST_URL:
+        description: '源代码地址(if want to use SSH keys, use git@github.com:XXXXX)'
+        required: true
+        default: '...请填写'
+      MANIFEST_BRANCH:
+        description: 'TWRP版本'
+        required: true
+        default: '...请填写'
+      DEVICE_TREE_URL:
+        description: '设备树地址'
+        required: true
+        default: '...请填写'
+      DEVICE_TREE_BRANCH:
+        description: '设备树分支'
+        required: true
+        default: '...请填写'
+      DEVICE_PATH:
+        description: 'DEVICE_PATH'
+        required: true
+        default: 'device/asus/I003D'
+      COMMON_TREE_URL:
+        description: 'COMMON_TREE_URL (if no common tree, leave blank)'
+        required: false
+      COMMON_PATH:
+        description: 'COMMON_PATH (if no common tree, leave blank)'
+        required: false
+      DEVICE_NAME:
+        description: 'DEVICE_NAME'
+        required: true
+        default: 'I003D'
+      MAKEFILE_NAME:
+        description: 'MAKEFILE_NAME'
+        required: true
+        default: 'twrp_I003D'
+      BUILD_TARGET:
+        description: 'BUILD_TARGET'
+        required: true
+        default: 'recovery'
+
