@@ -129,7 +129,8 @@ jobs:
     - name: 同步源代码.2
       run: |
         bash ${GITHUB_WORKSPACE}/scripts/convert.sh ${{ github.event.inputs.DEVICE_PATH }}/${{ steps.buildtree.outputs.value }}.dependencies
-        repo sync -j$(nproc --all)
+        repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
       continue-on-error: true
       
