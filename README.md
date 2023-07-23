@@ -1,2 +1,2 @@
-# build_recovery of SHRP
+# Build Recovery of SHRP
 基于/azwhikaru/Action-TWRP-Builder的第二次制作
