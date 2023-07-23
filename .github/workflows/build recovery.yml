@@ -90,7 +90,7 @@ jobs:
     - name: 安装 repo（如果失败请换镜像源）
       run: |
         mkdir ~/bin
-        curl https://mirrors.shanghaitech.edu.cn/git-repo > ~/bin/repo
+        curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo > ~/bin/repo
         chmod a+x ~/bin/repo
         sudo ln -sf ~/bin/repo /usr/bin/repo
         
